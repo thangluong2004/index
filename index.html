@@ -46,8 +46,18 @@
 
     <section id="home">
         <h2>Trang Chủ</h2>
-        <p>Chào mừng bạn đến với Rolls royce!</p>
-        <p>Nơi cung cấp những trải nghiệm tuyệt vời nhất dành cho bạn!</p>
+        <h1>Chào mừng bạn đến với Rolls royce!</h1>
+
+        <div class="container">
+            <div class="content">
+                
+                <p>Chúng tôi không chỉ là thời thượng, chúng tôi là sự bức phá!</p>
+                <p>Chúng tôi mang đến cho các bạn những trải nghiệm tuyệt với nhất!</p>
+            </div>
+            <div class="image-container">
+                <img src="h8.jpg" alt="Placeholder Image">
+            </div>
+        </div>
     </section>
     <div class="advertisement-container">
         <img src="qc.jpg" alt="Quảng Cáo">
@@ -59,8 +69,21 @@
     </div>
     <section id="about">
         <h2>Giới Thiệu</h2>
-        <p>Rolls-Royce không chỉ là thương hiệu, mà còn là nơi lắp đầy đam mê và thỏa mãn nhu cầu của bạn! </p>
-        <p>Hãy đến với chúng tôi để đạt được chìa khóa của sự thành công.</p>
+        <div class="container">
+            <div class="content">
+                <div class="product" data-info="Blue Plaque là tấm biển tròn màu xanh, đánh dấu nơi ở và làm việc của những nhân vật nổi tiếng. Charles Rolls là người thứ 850 được tưởng nhớ theo cách này. Địa chỉ có gắn tấm biển mang tên ông là nơi nhà tiên phong trong ngành công nghiệp ôtô và hàng không từng làm việc từ năm 1905 đến năm 1910.
+
+                Câu chuyện của Rolls-Royce bắt đầu khi Frederick Royce, một nhà sản xuất đồ điện người Anh cho ra đời những chiếc ôtô Royce đầu tiên vào năm 1904. Kiểu xe trang bị động cơ 3 xi-lanh, 10 mã lực đã thu hút sự chú ý của Charles Rolls, con trai của một nam tước và rất mê xe hơi.">
+                <p>Rolls-Royce - Lịch sử và danh tiếng
+                    100 năm sau khi mất, Charles Rolls được gắn tấm biển xanh tại nơi ông từng làm việc ở 14/15 phố Conduit (London, Anh). Rolls-Royce, hãng xe ông cùng Henry Royce thành lập năm 1906, là một trong 3 thương hiệu siêu sang trên thế giới.</p>
+                    <button class="show-info-btn">Xem Thông Tin</button>
+                    <div class="product-info"></div> <!-- Phần tử chứa thông tin chi tiết -->
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="h9.jpg" alt="Placeholder Image">
+            </div>
+        </div>
     </section>
 
     <section id="product1">
@@ -139,6 +162,8 @@
 
     <section id="products1" >
         <h2>Thu mua</h2>   
+        <div class="container1">
+            <div class="content1">
         <div class="product-grid">
         <div class="product" data-info="Điền thông tin xe máy đã qua sử dụng và số điện thoại của bạn để chúng tôi có thể liên hệ." >
             <h3>Bước 1: Chọn xe bạn muốn bán </h3>
@@ -164,6 +189,7 @@
             <div class="product-info"></div>
           </div> 
         </div>
+         
 
         <form action="submit_form.php" method="post">
             <label for="name">Tên:</label>
@@ -177,9 +203,13 @@
             <button type="submit">Gửi</button>
         </form>
         </section>
+    </div>
+</div>
 
-    <section id="contact">
+    <section id="contact1">
         <h2>Liên Hệ</h2>
+        <div class="container1">
+            <div class="content1">
         <form action="submit_form.php" method="post">
             <label for="name">Tên:</label>
             <input type="text" id="name" name="name" required>
@@ -213,6 +243,16 @@
     </section>
 
     <footer>
+        <div class="footer">
+            <div class="company-info">
+                <div class="title">Roll-Royce</div>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="fb.jpg" ></a>
+                <a href="#"><img src="yt.jpg" ></a>
+                <a href="#"><img src="ig.jpg" ></a>  
+            </div>
+          
         <p>&copy; Rolls-Royce. Sự hài lòng của bạn là ưu tiên của chúng tôi.</p>
     </footer>
 
