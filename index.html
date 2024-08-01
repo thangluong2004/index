@@ -94,6 +94,8 @@
                 <h3>Rolls-Royce Cullinan 2022</h3>
                 <p>Giá niên yết: 32 tỷ đồng</p>
                 <button class="show-info-btn">Xem Thông Tin</button>
+                <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+                <div class="notification" style="display: none;">Thanh toán thành công!</div>
                 <div class="product-info"></div> <!-- Phần tử chứa thông tin chi tiết -->
             </div>
             
@@ -102,6 +104,8 @@
                 <h3>Rolls-Royce Phantom 2022</h3>
                 <p>Giá niên yết: 70 tỷ đồng</p>
                 <button class="show-info-btn">Xem Thông Tin</button>
+                <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+                <div class="notification" style="display: none;">Thanh toán thành công!</div>
                 <div class="product-info"></div>
             </div>
           
@@ -110,10 +114,12 @@
                 <h3>Rolls-Royce Dawn</h3>
                 <p>Giá niên yết: 36 tỷ đồng</p>
                 <button class="show-info-btn">Xem Thông Tin</button>
+                <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+                <div class="notification" style="display: none;">Thanh toán thành công!</div>
                 <div class="product-info"></div>
             </div>
-            <!-- Thêm các sản phẩm khác tại đây -->
         </div>
+    
     </section>
 
     <section id="product2">
@@ -124,6 +130,8 @@
        <h3>Rolls Royce Ghost 2023</h3>
        <p>Giá niên yết: 34 tỷ đồng</p>
        <button class="show-info-btn">Xem Thông Tin</button>
+       <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+       <div class="notification" style="display: none;">Thanh toán thành công!</div>
        <div class="product-info"></div>
    </div>
    <div class="product" data-info="Rolls Royce Phantom VIII được trang bị nhiều tính năng hỗ trợ lái xe hiện đại, bao gồm hệ thống 04 camera với chế độ xem toàn cảnh, kiểm soát hành trình thích ứng, cảnh báo va chạm phía trước và cảnh báo lệch làn. Hơn nữa, hệ thống an toàn của xe cũng rất đáng tin cậy, bao gồm chống bó cứng phanh, hỗ trợ phanh khi vào cua, kiểm soát lực bám tự động và đèn pha laser có thể chiếu xa hơn 600m. Tất cả những tính năng này đều giúp tăng cường sự an toàn và sự thoải mái cho người lái xe.">
@@ -131,6 +139,9 @@
    <h3>Rolls Royce Phantom 8 EWB</h3>
    <p>Giá niên yết: 54 tỷ đồng</p>
    <button class="show-info-btn">Xem Thông Tin</button>
+   <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+    <div class="notification" style="display: none;">Thanh toán thành công!</div>
+
    <div class="product-info"></div>
 </div>
 </div>
@@ -146,6 +157,9 @@
         <h3>Rolls-Royce Wraith</h3>
         <p>Giá niên yết: 33.6 tỷ đồng</p>
         <button class="show-info-btn">Xem Thông Tin</button>
+        <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+    <div class="notification" style="display: none;">Thanh toán thành công!</div>
+
         <div class="product-info"></div>
     </div>
     <div class="product" data-info="Sau hơn 1 năm ra mắt thị trường toàn cầu (tháng 10/2022), mẫu thuần điện đầu tiên của hãng xe siêu sang Anh quốc Rolls-Royce Spectre đã chính thức cập bến Việt Nam và trình làng ngày 12/1/2024. Chiếc xe được diện kiến công chúng Việt Nam là xe mẫu với ngoại thất màu xanh lá sang trọng. Giá khởi điểm từ 17,99 tỷ đồng và sẽ đắt lên theo các tùy chọn cá nhân hóa của từng khách.">
@@ -154,9 +168,13 @@
             <h3>Rolls Royce Spectre 2025</h3>
             <p>Giá niên yết: 18 tỷ đồng</p>
             <button class="show-info-btn">Xem Thông Tin</button>
+            <a href="#" class="buy-button" onclick="buyProduct(event, this)">Mua Ngay</a>
+            <div class="notification" style="display: none;">Thanh toán thành công!</div>
+
             <div class="product-info"></div>
         </div>
 </div>
+
 </section>
 
 
@@ -247,6 +265,7 @@
             <div class="company-info">
                 <div class="title">Roll-Royce</div>
             </div>
+            
             <div class="social-links">
                 <a href="#"><img src="fb.jpg" ></a>
                 <a href="#"><img src="yt.jpg" ></a>
@@ -258,6 +277,17 @@
 
     <script src="scripts.js"></script>
     <script>
+function buyProduct(event, element) {
+    event.preventDefault(); // Ngăn hành động mặc định của thẻ <a>
+    
+    var productElement = element.closest('.product');
+    var notification = productElement.querySelector('.notification');
+    notification.style.display = 'block';
+    
+    setTimeout(function() {
+        notification.style.display = 'none';
+    }, 3000);
+}
   function toggleMenu() {
             var sideMenu = document.getElementById("side-menu");
 
