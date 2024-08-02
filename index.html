@@ -6,7 +6,8 @@
     <title>Rolls royce</title>
 
     <link rel="stylesheet" href="styles.css">
-  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
      
@@ -29,22 +30,27 @@
 
     <div id="side-menu" class="side-menu">  
         <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times; </a>
-        <a href="#home" onclick="toggleMenu()">Trang Chủ</a>
-        <a href="#about" onclick="toggleMenu()">Giới Thiệu</a>
+        <a href="#Trang Chủ" onclick="toggleMenu()">Trang Chủ</a>
+        <a href="#Giới Thiệu" onclick="toggleMenu()">Giới Thiệu</a>
         <li class="dropdown">
             <a href="#products" class="dropbtn">Danh Mục Sản Phẩm</a>
             <div class="dropdown-content">
-                <a href="#product1">2022</a>
-                <a href="#product2">2023</a>
-                <a href="#product3">2024</a>
+                <a href="#2022">2022</a>
+                <a href="#2023">2023</a>
+                <a href="#2024">2024</a>
             </div>
         </li>
-        <a href="#products1" onclick="toggleMenu()">Thu mua</a>
-        <a href="#contact" onclick="toggleMenu()">Liên Hệ</a>
+        <a href="#Thu mua" onclick="toggleMenu()">Thu mua</a>
+        <a href="#Liên Hệ" onclick="toggleMenu()">Liên Hệ</a>
+        <li class="search-container">
+            <input type="text" placeholder="Tìm kiếm..." id="search-bar">
+            <button type="button" id="search-button">Tìm kiếm</button>
+        </li>
+
     </div>
     
 
-    <section id="home">
+    <section id="Trang Chủ">
         <h2>Trang Chủ</h2>
         <h1>Chào mừng bạn đến với Rolls royce!</h1>
 
@@ -67,7 +73,7 @@
             <a href="#" class="advertisement-button">Tìm Hiểu Ngay</a>
         </div>
     </div>
-    <section id="about">
+    <section id="Giới Thiệu">
         <h2>Giới Thiệu</h2>
         <div class="container">
             <div class="content">
@@ -86,7 +92,7 @@
         </div>
     </section>
 
-    <section id="product1">
+    <section id="2022">
         <h1>2022</h1>
         <div class="product-grid">
             <div class="product" data-info="Rolls Royce Cullinan, cái tên mà ngay khi được nhắc đến, đã đánh dấu một sự xuất hiện độc đáo trong thế giới xe hơi siêu sang và là một biểu tượng kết hợp giữa tinh tế và mạnh mẽ. Được giới thiệu vào năm 2018, Cullinan đưa thương hiệu danh tiếng Rolls-Royce từ thế giới của các mẫu sedan và coupe cao cấp bước vào lĩnh vực SUV sang trọng. Mẫu xe này không chỉ nổi bật với sự đẳng cấp và tinh tế điển hình của Rolls-Royce, mà còn là một ví dụ hoàn hảo về khả năng vận hành đa dụng và hiệu năng mạnh mẽ. Cùng SOZ khám phá tất tần tật về Rolls Royce Cullinan ngay dưới đây. ">
@@ -122,7 +128,7 @@
     
     </section>
 
-    <section id="product2">
+    <section id="2023">
         <h1>2023</h1>
         <div class="product-grid">
     <div class="product" data-info="Rolls Royce Ghost, một biểu tượng của đẳng cấp và tinh tế trong thế giới xe hạng sang, đã tự hào trải qua một hành trình dài hơn một thế kỷ để trở thành một trong những mẫu xe đắt đỏ và được biết đến rộng rãi nhất của thương hiệu nổi tiếng Rolls-Royce. Với thiết kế tối giản, đầy đủ những tính năng công nghệ tiên tiến, và sự chăm sóc tận tâm trong từng chi tiết, Rolls Royce Ghost đã xây dựng một danh tiếng vô cùng đặc biệt. Trong bài viết này, cùng SOZ khám phá sâu hơn về Rolls Royce Ghost, từ ngoại thất độc đáo đến nội thất đẳng cấp, và những công nghệ tiên tiến đằng sau bộ lưới tản nhiệt, tạo nên một chiếc xe hạng sang được đánh giá cao và đẳng cấp không giới hạn.">
@@ -148,7 +154,7 @@
 </section>
 
 
-<section id="product3">
+<section id="2024">
     <h1>2024</h1>
     <div class="product-grid">
    <div class="product" data-info="Rolls Royce Wraith lần đầu tiên được ra mắt công chúng vào tháng 01/2013. Năm 2016, Rolls Royce Wraith bổ sung thêm phiên bản Black Badge. Rolls Royce Wraith 2023 vẫn thuộc thế hệ thứ 1 và là dòng xe coupe siêu sang, được nhiều đại gia trên thế giới và Việt Nam yêu thích.">
@@ -178,7 +184,7 @@
 </section>
 
 
-    <section id="products1" >
+    <section id="Thu mua" >
         <h2>Thu mua</h2>   
         <div class="container1">
             <div class="content1">
@@ -224,7 +230,7 @@
     </div>
 </div>
 
-    <section id="contact1">
+    <section id="Liên Hệ">
         <h2>Liên Hệ</h2>
         <div class="container1">
             <div class="content1">
@@ -277,6 +283,24 @@
 
     <script src="scripts.js"></script>
     <script>
+ document.getElementById('search-button').addEventListener('click', function() {
+    const query = document.getElementById('search-bar').value.toLowerCase();
+    const sections = document.querySelectorAll('section[id]'); // Chọn tất cả các phần có id
+
+    let found = false;
+    
+    sections.forEach(section => {
+        if (section.id.toLowerCase() === query) {
+            section.scrollIntoView({ behavior: 'smooth' }); // Cuộn đến mục tiêu
+            found = true;
+        }
+    });
+
+    if (!found) {
+        alert('Không tìm thấy phần tử phù hợp');
+    }
+});
+
 function buyProduct(event, element) {
     event.preventDefault(); // Ngăn hành động mặc định của thẻ <a>
     
