@@ -210,20 +210,20 @@ section {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
 
-#home {
+#Trang Chủ {
     padding: 10px 20px; /* Giảm padding để phần nền trắng nhỏ lại */
     max-width: 60%; /* Giới hạn chiều rộng nhỏ hơn */
 }
-#about {
+#Giới Thiệu {
     padding: 10px 20px; /* Giảm padding để phần nền trắng nhỏ lại */
     max-width: 100%; /* Giới hạn chiều rộng nhỏ hơn */
 }
-#home { 
+#Trang Chủ { 
     margin-top: 250px; /* Tăng khoảng cách với phần tiếp theo */
     margin-bottom: 400px;
 }
 
-#about {
+#Giới Thiệu {
     margin-bottom: 300px; /* Tăng khoảng cách với phần tiếp theo */
 }
 #products {
@@ -233,7 +233,7 @@ section {
     margin: 1em 0;
 }
 
-#product1 {
+#2022 {
     padding: 20px 30px; /* Giữ padding lớn để phần nội dung lớn hơn */
     background-color: rgba(29, 25, 25, 0.8); /* Màu nền với độ trong suốt */
     border-radius: 20px;
@@ -241,7 +241,7 @@ section {
     max-width: 100%; /* Giới hạn chiều rộng lớn hơn cho phần sản phẩm */
     margin: 100px auto; /* Tăng khoảng cách với phần tiếp theo */
 }
-#product2 {
+#2023 {
     padding: 20px 30px; /* Giữ padding lớn để phần nội dung lớn hơn */
     background-color: rgba(29, 25, 25, 0.8); /* Màu nền với độ trong suốt */
     border-radius: 20px;
@@ -249,7 +249,7 @@ section {
     max-width: 100%; /* Giới hạn chiều rộng lớn hơn cho phần sản phẩm */
     margin: 100px auto; /* Tăng khoảng cách với phần tiếp theo */
 }
-#product3{
+#2024 {
     padding: 20px 30px; /* Giữ padding lớn để phần nội dung lớn hơn */
     background-color: rgba(29, 25, 25, 0.8); /* Màu nền với độ trong suốt */
     border-radius: 20px;
@@ -257,7 +257,7 @@ section {
     max-width: 100%; /* Giới hạn chiều rộng lớn hơn cho phần sản phẩm */
     margin: 100px auto; /* Tăng khoảng cách với phần tiếp theo */
 }
-#products1  {
+#Thu mua  {
     padding: 20px 30px; /* Giữ padding lớn để phần nội dung lớn hơn */
     background-color: rgba(255, 255, 255, 0.8); /* Màu nền với độ trong suốt */
     border-radius: 20px;
@@ -462,7 +462,7 @@ footer {
     padding: 20px;
     border: 1px solid #ccc; /* Optional border for visibility */
 }
-#contact1 {
+#Liên Hệ {
     margin-bottom: 150px;
 }
 .container1 {
@@ -553,4 +553,48 @@ footer {
     color: white;
     padding: 10px;
     border-radius: 5px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+#search-bar {
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    font-size: 14px;
+    transition: width 0.3s ease;
+    width: 200px;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+#search-bar:focus {
+    width: 250px;
+}
+
+#search-button {
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #2980b9;
+}
+
+#search-button i {
+    font-size: 16px;
+}section[id] {
+    margin: none;
+    padding: none;
+    border: 1px solid #ccc;
 }
