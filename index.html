@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
 </head>
 <body>
@@ -41,6 +42,7 @@
             </div>
         </li>
         <a href="#Thu mua" onclick="toggleMenu()">Thu mua</a>
+        <a href="#Dịch Vụ" onclick="toggleMenu()">Dịch Vụ</a>
         <a href="#Liên Hệ" onclick="toggleMenu()">Liên Hệ</a>
         <li class="search-container">
             <input type="text" placeholder="Tìm kiếm..." id="search-bar">
@@ -230,6 +232,53 @@
     </div>
 </div>
 
+<section id="Dịch Vụ">
+    <div class="container2">
+        <h2>Form Đăng Ký Dịch Vụ</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="car_model">Mẫu Xe:</label>
+                <input type="text" id="car_model" name="car_model" required>
+            </div>
+            <div class="form-group">
+                <label for="service">Chọn Dịch Vụ:</label>
+                <select id="service" name="service" required>
+                    <option value="">--Chọn Dịch Vụ--</option>
+                    <option value="bao_duong">Bảo Dưỡng</option>
+                    <option value="sua_chua">Sửa Chữa</option>
+                    <option value="thay_dau">Thay Dầu</option>
+                    <option value="kiem_tra_dong_co">Kiểm Tra Động Cơ</option>
+                    <option value="thay_phu_tung">Thay Thế Phụ Tùng</option>
+                    <option value="khac">Khác</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="appointment_date">Ngày Hẹn:</label>
+                <input type="text" id="appointment_date" name="appointment_date" required>
+            </div>
+            <div class="form-group">
+                <label for="notes">Ghi Chú Khác:</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng Ký">
+            </div>
+        </form>
+    </div>
+        </section>
+
     <section id="Liên Hệ">
         <h2>Liên Hệ</h2>
         <div class="container1">
@@ -280,9 +329,18 @@
           
         <p>&copy; Rolls-Royce. Sự hài lòng của bạn là ưu tiên của chúng tôi.</p>
     </footer>
-
+  
     <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script>
+            $(function() {
+            $("#appointment_date").datepicker({
+                dateFormat: "dd-mm-yy",
+                changeMonth: true,
+                changeYear: true
+            });
+        });
  document.getElementById('search-button').addEventListener('click', function() {
     const query = document.getElementById('search-bar').value.toLowerCase();
     const sections = document.querySelectorAll('section[id]'); // Chọn tất cả các phần có id
