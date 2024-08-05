@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
 
 </head>
 <body>
@@ -264,7 +265,11 @@
                     <option value="khac">Khác</option>
                 </select>
             </div>
-             <div class="form-group">
+            <div class="form-group">
+                <label for="appointment_date">Ngày Hẹn:</label>
+                <input type="text" id="appointment_date" name="appointment_date" required>
+            </div>
+            <div class="form-group">
                 <label for="after_sales">Dịch Vụ Hậu Mãi:</label>
                 <div class="checkbox-group">
                     <label><input type="checkbox" name="after_sales" value="bao_hanh"> Bảo Hành</label>
@@ -272,10 +277,6 @@
                     <label><input type="checkbox" name="after_sales" value="cap_nhat"> Cập Nhật Phần Mềm</label>
                     <label><input type="checkbox" name="after_sales" value="khuyen_mai"> Khuyến Mãi Đặc Biệt</label>
                 </div>
-            </div>     
-            <div class="form-group">
-                <label for="appointment_date">Ngày Hẹn:</label>
-                <input type="text" id="appointment_date" name="appointment_date" required>
             </div>
             <div class="form-group">
                 <label for="notes">Ghi Chú Khác:</label>
@@ -335,21 +336,37 @@
                 <a href="#"><img src="yt.jpg" ></a>
                 <a href="#"><img src="ig.jpg" ></a>  
             </div>
-          
+            <p>Giờ làm việc: 8:00 - 18:00 (Thứ 2 - Thứ 7)</p>
         <p>&copy; Rolls-Royce. Sự hài lòng của bạn là ưu tiên của chúng tôi.</p>
     </footer>
+    <div class="feedback-bar" id="feedback-bar">
+        Cảm ơn bạn đã đăng ký dịch vụ! Chúng tôi sẽ liên hệ bạn sớm nhất có thể.
+    </div>
+    <div class="message-icon" id="message-icon">
+        <i class="fas fa-envelope"></i>
+    </div>
   
     <script src="scripts.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script>
-            $(function() {
+       
+       $(function() {
             $("#appointment_date").datepicker({
                 dateFormat: "dd-mm-yy",
                 changeMonth: true,
                 changeYear: true
             });
+
+            $('#message-icon').on('click', function() {
+                $('#feedback-bar').slideToggle();
+            });
+
+            $('#close-feedback').on('click', function() {
+                $('#feedback-bar').slideUp();
+            });
         });
+        
  document.getElementById('search-button').addEventListener('click', function() {
     const query = document.getElementById('search-bar').value.toLowerCase();
     const sections = document.querySelectorAll('section[id]'); // Chọn tất cả các phần có id
